@@ -87,23 +87,27 @@ In the account management view, a user can view and edit her credentials (email,
 
 The controller should support operations to create, read, update, and delete (as applicable) instances of the data entities defined below. It may be tightly integrated with the web view and data store (as in a web application framework like Meteor) or live separately as a REST service to which the web view points.
 
+#### Algorithmic inference of relations between works: a placeholder
+
+As a placeholder for future development, the prototype should include a simple inference function that surfaces relations among works by the same author (that is, authors whose names are deemed identical via a simple string match).
+
 ### Data store
 
 A data model (schema) must be defined for the following entities:
-
-#### Work
-
-Should consist of the metadata fields sufficient to produce a Chicago-style citation, as well as unique identifiers (e.g., DOI) and any author- or API-supplied keywords to facilitate efficient recall of associated works.
-
-Consider using Zotero's [CrossRef REST translator] to help model works from disparate sources (Relata dataset, CrossRef, Zotero).
-
-[CrossRef REST translator]: https://github.com/zotero/translators/blob/master/Crossref-REST.js
 
 #### Relation
 
 Represents a relation type and (if applicable) annotation. Based on the fields defined in the source dataset.
 
 Relation "sub-type" data from the source dataset should be folded into the annotation property.
+
+For the prototype, a "work" (representing a bibliographic work, or node) sub-entity can be defined via properties of the relation entity. Entity resolution will be performed by way of a fuzzy match algorithm: if the algorithm produces a confidence level above a given threshold, two instances may be deemed the same work.
+
+The work sub-entity should consist of the metadata fields sufficient to produce a Chicago-style citation, as well as unique identifiers (e.g., DOI) and any author- or API-supplied keywords to facilitate efficient recall of associated works.
+
+Consider using Zotero's [CrossRef REST translator] to help model works from disparate sources (Relata dataset, CrossRef, Zotero).
+
+[CrossRef REST translator]: https://github.com/zotero/translators/blob/master/Crossref-REST.js
 
 #### Author
 
@@ -112,6 +116,25 @@ Represents a scholar who has contributed to the source dataset.
 #### User
 
 Represents a user who has set up an account within the Relata app. Used to support login and account management, as well as adding and editing custom relations.
+
+### Configuration file
+
+A configuration file should be used to specify global instance-level settings, such as color scheme, hostname, and credentials.
+
+Color scheme settings for relation types may be as simple as mappings from relation type strings to HTML color names or codes, as in the following example:
+
+```json
+{
+   "critique": "red",
+   "criticism": "red",
+   "critica": "red",
+   "extension": "blue",
+   "rejoinder": "blue",
+   "absence": "yellow",
+   "omission": "yellow"
+   "*": "grey" /* default */
+}
+```
 
 ## Development milestones
 
@@ -147,4 +170,4 @@ The following points, though out of scope for the prototype, may be relevant for
 * Each instance of the Relata application connects to other instances via a shared graph
 * Support user credentials that work across multiple Relata instances
 * Support user auth via an external provider such as Zotero to avoid forcing users to maintain a Relata account
-* Algorithmic inference of relations between works
+* Fully developed algorithmic inference of relations between works
