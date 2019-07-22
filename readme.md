@@ -144,11 +144,11 @@ Color scheme settings for relation types may be as simple as mappings from relat
 * ~~Examine proof-of-concept and source dataset~~
 * ~~Compose design document~~
 * **In progress:** Research platform(s) for mounting app
-* **In progress:** Formally define data model for entities
-* **In progress:** Clean source dataset
-* Populate cleaned source dataset into data model
-* Sketch out wireframes for views
-* Define controller actions (API endpoints/verbs) sufficient to support app functionality
+* ~~Formally define data model for entities~~
+* ~~Clean source dataset~~
+* ~~Populate cleaned source dataset into data model~~
+* **In progress:** Sketch out wireframes for views
+* **In progress:** Define controller actions (API endpoints/verbs) sufficient to support app functionality
 * Define platform(s) for mounting app
 
 ### Phase 2: Build core functionality for displaying works/relations from source dataset
