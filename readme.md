@@ -85,7 +85,7 @@ In the account management view, a user can view and edit her credentials (email,
 
 ### Controller/API
 
-The controller should support operations to create, read, update, and delete (as applicable) instances of the data entities defined below. It may be tightly integrated with the web view and data store (as in a web application framework like Meteor) or live separately as a REST service to which the web view points.
+The controller should support operations to create, read, update, and delete (as applicable) instances of the data entities defined below.
 
 #### Algorithmic inference of relations between works: a placeholder
 
@@ -108,10 +108,6 @@ The work sub-entity should consist of the metadata fields sufficient to produce 
 Consider using Zotero's [CrossRef REST translator] to help model works from disparate sources (Relata dataset, CrossRef, Zotero).
 
 [CrossRef REST translator]: https://github.com/zotero/translators/blob/master/Crossref-REST.js
-
-#### Author
-
-Represents a scholar who has contributed to the source dataset.
 
 #### User
 
@@ -143,24 +139,24 @@ Color scheme settings for relation types may be as simple as mappings from relat
 * ~~Gather technical requirements~~
 * ~~Examine proof-of-concept and source dataset~~
 * ~~Compose design document~~
-* **In progress:** Research platform(s) for mounting app
+* ~~Research platform(s) for mounting app~~
 * ~~Formally define data model for entities~~
 * ~~Clean source dataset~~
 * ~~Populate cleaned source dataset into data model~~
-* **In progress:** Sketch out wireframes for views
-* **In progress:** Define controller actions (API endpoints/verbs) sufficient to support app functionality
-* Define platform(s) for mounting app
+* ~~Sketch out wireframes for views~~
+* ~~Define controller actions (API endpoints/verbs) sufficient to support app functionality~~
+* ~~Define platform(s) for mounting app~~
 
 ### Phase 2: Build core functionality for displaying works/relations from source dataset
 
-* Build data store based on data model
-* Build controller actions to support core functionality
-* Build web interface to support core functionality
+* ~~Build data store based on data model~~
+* ~~Build controller actions to support core functionality~~
+* In progress: Build web interface to support core functionality
 
 ### Phase 3: Build user contribution functionality
 
-* Build controller actions to support user add/edit and account management functionality
-* Build web interface to support user add/edit and account management functionality
+* In progress: Build controller actions to support user add/edit and account management functionality
+* Build web interface to support user add/edit, search, and account management functionality
 
 ## Future work
 
@@ -169,5 +165,5 @@ The following points, though out of scope for the prototype, may be relevant for
 * Collect and display version history for relations, perhaps stored as an array within a given relation object
 * Each instance of the Relata application connects to other instances via a shared graph
 * Support user credentials that work across multiple Relata instances
-* Support user auth via an external provider such as Zotero to avoid forcing users to maintain a Relata account
+* Support user auth via an external provider such as Zotero to avoid forcing users to maintain a Relata account (seems doable with OAuth)
 * Fully developed algorithmic inference of relations between works
