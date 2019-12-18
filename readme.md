@@ -151,12 +151,22 @@ Color scheme settings for relation types may be as simple as mappings from relat
 
 * ~~Build data store based on data model~~
 * ~~Build controller actions to support core functionality~~
-* In progress: Build web interface to support core functionality
+* ~~Build web interface to support core functionality~~
 
 ### Phase 3: Build user contribution functionality
 
-* In progress: Build controller actions to support user add/edit and account management functionality
-* Build web interface to support user add/edit, search, and account management functionality
+* ~~Build controller actions to support user add/edit and account management functionality~~
+* ~~Build web interface to support user auth/login functionality~~ (done via GitHub OAuth, other OAuth providers such as Google and Zotero may be added as well)
+* ~~Build web interface to support user contributions review/management functionality~~
+* Build web interface to support addition of a new relation (in progress)
+  + ~~via DOI~~
+  + via arbitrary metadata fields
+* Build web interface for search functionality (in progress)
+
+### Wrap-up
+
+* Add "starting points" to app interface so that users can start exploring on their own
+* Develop documentation to support app deployment and maintenance
 
 ## Future work
 
