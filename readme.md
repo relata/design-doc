@@ -1,5 +1,7 @@
 # Relata Prototype: Design Doc
 
+The following design document was used to scope out development of the [relata-prototype](https://github.com/relata/relata-prototype) web app. For updated documentation, or to deploy the app yourself, please visit the relata-prototype repository.
+
 ## Summary
 
 The [Relata] prototype will be a web-based tool through which users may explore and add relations between scholarly works. Its functionality is intended to "privilege values of epistemological pluralism and critique" via a graph of these relations, in contrast to conventional search tools premised on explicit citation and scores based on similarity or popularity.
@@ -158,22 +160,25 @@ Color scheme settings for relation types may be as simple as mappings from relat
 * ~~Build controller actions to support user add/edit and account management functionality~~
 * ~~Build web interface to support user auth/login functionality~~ (done via GitHub OAuth, other OAuth providers such as Google and Zotero may be added as well)
 * ~~Build web interface to support user contributions review/management functionality~~
-* Build web interface to support addition of a new relation (in progress)
+* ~~Build web interface to support addition of a new relation~~
   + ~~via DOI~~
-  + via arbitrary metadata fields
-* Build web interface for search functionality (in progress)
+  + ~~via CrossRef search~~
+* ~~Build web interface for search functionality~~
+* ~~Support user auth via external providers to avoid forcing users to maintain a Relata account (done with OAuth)~~
 
 ### Wrap-up
 
-* Add "starting points" to app interface so that users can start exploring on their own
-* Develop documentation to support app deployment and maintenance
+* ~~Develop documentation to support app deployment and maintenance~~
 
 ## Future work
 
 The following points, though out of scope for the prototype, may be relevant for future development:
 
-* Collect and display version history for relations, perhaps stored as an array within a given relation object
+* Collect and display "version history" for relations, perhaps stored as an array within a given relation object
 * Each instance of the Relata application connects to other instances via a shared graph
 * Support user credentials that work across multiple Relata instances
-* Support user auth via an external provider such as Zotero to avoid forcing users to maintain a Relata account (seems doable with OAuth)
 * Fully developed algorithmic inference of relations between works
+* Support entry of arbitrary metadata
+* Add "starting points" within app to better enable users to start exploring from certain specified works/relations
+
+See also the [Future work](https://github.com/relata/relata-prototype/#future-work) section of the relata-prototype readme for suggested development tasks to enhance the prototype implementation.
